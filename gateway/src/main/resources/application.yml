@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: gateway
+  cloud:
+    nacos:
+      discovery:
+        namespace: daace996-7ee3-4f49-b1e0-2b8b25b22a92
+        username: nacos
+        password: nacos
+        server-addr: 192.168.52.129:8848
+    gateway:
+      routes:
+        - id: test
+          uri: lb://test
+          predicates:
+            - Path=/yang/zz/test/**
+          filters:
+            - StripPrefix=2
+server:
+  port: 9999

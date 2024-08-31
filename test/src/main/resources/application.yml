@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: test
+  cloud:
+    nacos:
+      discovery:
+        namespace: daace996-7ee3-4f49-b1e0-2b8b25b22a92
+        server-addr: 192.168.52.129:8848
+        username: nacos
+        password: nacos
+server:
+  port: 8888
